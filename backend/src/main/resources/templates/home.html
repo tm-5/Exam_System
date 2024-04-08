@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách bài kiểm tra</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	
+</head>
+
+
+<body>
+	<style>
+	    .locked-exam {
+	        background-color: #f0f0f0;
+	        cursor: not-allowed;
+	        opacity: 0.5;
+	    }
+	
+	    .center-content {
+	        text-align: center;
+	    }
+	</style>
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 0, 0);">
+		    <a class="navbar-brand" href="#" style="color: white;">Home</a>
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarNav">
+		        <ul class="navbar-nav ml-auto">
+		            <li class="nav-item">
+						<a th:href="@{/login}" class="nav-link" style="color: white;">Đăng xuất</a>
+		            </li>
+		        </ul>
+		    </div>
+		</nav>
+		<div class="container mt-4">
+		    <h2 class="text-center">Danh sách bài kiểm tra</h2>
+		    <div class="row mt-3 mb-5">
+		        <div class="col-lg-6 offset-lg-3">
+		            <div class="input-group">
+		                <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm">
+		                <div class="input-group-append">
+		                    <button class="btn btn-primary" type="button">
+		                        <i class="fa-solid fa-magnifying-glass"></i>
+		                    </button>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		
+		    <div class="row">
+		        <div th:each="exam : ${exams}" class="col-lg-4 mb-3 exam"> 
+		            <div class="card" 					th:classappend="${not exam.type} ? 'locked-exam' : ''">
+		                <div class="card-body">
+		                    <h5 class="card-title center-content" th:text="${exam.name}"></h5>
+		                    <p class="card-text" th:text="${exam.description}"></p>
+		                    <p class="card-text">
+		                        Start time:
+		                        <span th:if="${exam.startTime != null}" th:text="${exam.startTime}"></span>
+		                        <span th:unless="${exam.startTime != null}">Không có</span>
+		                    </p>
+		                    <p class="card-text">
+		                        End time:
+		                        <span th:if="${exam.endTime != null}" th:text="${exam.endTime}"></span>
+		                        <span th:unless="${exam.endTime != null}">Không có</span>
+		                    </p>
+		                    <p class="card-text text-right">
+		                        <i class="fa-solid fa-hourglass"></i>
+		                        <span th:text="'Thời gian: ' + ${exam.timeDuration} + ' phút'"></span>
+		                    </p>
+		                    <div th:if="${not exam.type}">
+		                        
+		                    </div>
+		                    <div th:unless="${not exam.type}">
+		                        <div class="center-content">
+		                            <a th:href="@{'/exam_detail/' + ${exam.id}}" class="btn btn-danger">Vào thi</a>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		
+		<script>
+		    document.addEventListener("DOMContentLoaded", function () {
+		        const searchInput = document.getElementById("searchInput");
+		        const exams = document.querySelectorAll(".exam");
+		
+		        searchInput.addEventListener("input", function () {
+		            const query = this.value.trim().toLowerCase();
+		
+		            exams.forEach(function (exam) {
+		                const examName = exam.querySelector(".card-title").textContent.trim().toLowerCase();
+		                const totalQuestions = exam.querySelector(".card-text").textContent.trim().toLowerCase();
+		
+		                if (examName.includes(query) || totalQuestions.includes(query)) {
+		                    exam.style.display = "";
+		                } else {
+		                    exam.style.display = "none";
+		                }
+		            });
+		        });
+		    });
+		</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

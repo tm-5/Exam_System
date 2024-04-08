@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                        <h3 class="title text-center">Kết quả</h3>
+                        <div class="alert alert-success" th:if="${correctAnswers > 0}">
+                            <p th:text="'Số câu đúng: ' + ${correctAnswers}"></p>
+                        </div>
+                        <div class="alert alert-danger" th:if="${wrongAnswers > 0}">
+                            <p th:text="'Số câu sai: ' + ${wrongAnswers}"></p>
+                        </div>
+                        <div class="alert alert-info" th:if="${correctAnswers == 0 && wrongAnswers == 0}">
+                            <p>Bạn chưa trả lời câu hỏi nào</p>
+                </div>
+                    
+            </div>
+			<div class="container mt-3">
+				    <style>
+				        .selected-correct-answer {
+				            background-color: #c8e6c9; 
+				        }
+						.selected-wrong-answer {
+						            background-color: #ffcdd2;
+						        }
+				    </style>
+					<table class="table table-bordered">
+					    <thead class="thead-dark text-center">
+							<tr>
+							            <th scope="col" style="width: 40%;">Câu hỏi</th>
+							            <th scope="col" style="width: 19%;">Các lựa chọn</th>
+							            <th scope="col" style="width: 8%;">Bạn đã chọn</th>
+							            <th scope="col" style="width: 8%;">Đáp án đúng</th>
+							            <th scope="col" style="width: 25%;">Giải thích</th>
+							</tr>
+					    </thead>
+					    <tbody>
+					        <tr th:each="question, questionIndex : ${questions}">
+					            <td th:text="${question.content}"></td>
+					            <td>
+					                <ul class="list-unstyled">
+					                    <li><label class="form-check-label" th:text="'0. '+ ${question.answer1}"></label></li>
+					                    <li><label class="form-check-label" th:text="'1. '+${question.answer2}"></label></li>
+					                    <li><label class="form-check-label" th:text="'2. '+${question.answer3}"></label></li>
+					                    <li><label class="form-check-label" th:text="'3. '+${question.answer4}"></label></li>
+					                </ul>
+					            </td>
+					            <td th:class="${userAnswers[questionIndex.index + 1] == question.rightAnswer} ? 'selected-correct-answer' : 'selected-wrong-answer'">
+					                <span th:text="${userAnswers[questionIndex.index + 1]}"></span>
+					            </td>
+					            <td	th:class="${userAnswers[questionIndex.index + 1] == question.rightAnswer} ? 'selected-correct-answer' : 'selected-wrong-answer'" th:text="${question.rightAnswer}"></td	>
+								<td th:text="${question.explain}"></td>
+					        </tr>
+					    </tbody>
+					</table>
+
+			</div>
+
+        </div>
+		<div class="card-footer text-center">
+			<a href="/home" class="btn btn-primary">Trang chủ</a>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Detail</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<style>
+	        .sticky-bottom {
+	            position: fixed;
+	            left: 0;
+	            bottom: 0;
+	            width: 22%;
+	            background-color: white;
+	            text-align: right;
+	            padding: 25px 5px;
+	            z-index: 1000;
+	        }
+	
+	        .form-check-input {
+	            width: 20px;
+	            height: 20px;
+				cursor:pointer;	
+				padding-right: 10px;
+	        }
+	    </style>
+</head>
+<body>
+	
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 0, 0);">
+        <a class="navbar-brand" th:href="@{/home}" style="color: white;">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+					<a th:href="@{/logout}" class="nav-link" style="color: white;">Đăng xuất</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	<div class="container mt-5">
+	    <div class="row">
+			<div class="col-md-2">
+			            <div class="sticky-top">
+			                <div class="card mb-3">
+			                    <div class="card-header text-center">
+			                        <h5 class="card-title">Thời gian còn lại</h5>
+			                    </div>
+									<i class="fa-regular fa-clock text-center mt-3 mb-2" style="line-height: 100%;"></i>
+			                        <div id="timer" class=" mb-2 text-center "></div>
+			                </div>
+			            </div>
+			        </div>
+					<input type="hidden" id="timeDuration" th:value="${exam.timeDuration}">
+
+	        <div class="col-md-10">
+				<form action="/submitExam" method="post" id="examForm" 	onsubmit="return confirmSubmit();">
+				            <div th:each="question, questionIndex : ${questions}" th:count="*{questionCount}">
+				                <div class="question card mb-3">
+				                    <div class="card-header">
+				                        <h5 class="card-title" th:text="'Câu ' + ${questionIndex.count} + ': ' + ${question.content}"></h5>
+				                    </div>
+				                    <div class="card-body">
+				                        <div class="form-check">
+				                            <input class="form-check-input" type="radio" th:id="'option-' + ${question.id} + '-1'" th:name="'question_' + ${question.id}" th:value="0" required />
+				                            <label class="form-check-label ml-2 mt-1" th:for="'option-' + ${question.id} + '-1'" th:text="${question.answer1}"></label>
+				                        </div>
+				                        <div class="form-check">
+				                            <input class="form-check-input" type="radio" th:id="'option-' + ${question.id} + '-2'" th:name="'question_' + ${question.id}" th:value="1" required />
+				                            <label class="form-check-label ml-2 mt-1" th:for="'option-' + ${question.id} + '-2'" th:text="${question.answer2}"></label>
+				                        </div>
+				                        <div class="form-check">
+				                            <input class="form-check-input" type="radio" th:id="'option-' + ${question.id} + '-3'" th:name="'question_' + ${question.id}" th:value="2" required />
+				                            <label class="form-check-label ml-2 mt-1" th:for="'option-' + ${question.id} + '-3'" th:text="${question.answer3}"></label>
+				                        </div>
+				                        <div class="form-check">
+				                            <input class="form-check-input" type="radio" th:id="'option-' + ${question.id} + '-4'" th:name="'question_' + ${question.id}" th:value="3" required />
+				                            <label class="form-check-label ml-2 mt-1" th:for="'option-' + ${question.id} + '-4'" th:text="${question.answer4}"></label>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="container mb-5 sticky-bottom">
+				                <button type="submit" class="btn btn-danger" style="right:0; padding:10px 15px;">Nộp bài</button>
+				            </div>
+				        </form>
+	        </div>
+	    </div>
+	</div>
+
+	<script th:inline="javascript">
+			function confirmSubmit() {
+		            if(confirm("Are you sure you want to submit the exam?")){
+						return true;
+					}
+					else return false;
+		    }
+			
+			function updateTimer(displayElement) {
+			    var timer = parseInt(document.getElementById("timeDuration").value)*60; 
+			    var minutes, seconds;
+			
+			    setInterval(function () {
+			        minutes = parseInt(timer / 60, 10);
+			        seconds = parseInt(timer % 60, 10);
+			
+			        minutes = minutes < 10 ? "0" + minutes : minutes;
+			        seconds = seconds < 10 ? "0" + seconds : seconds;
+			
+			        displayElement.textContent = minutes + ":" + seconds;
+			
+			        if (--timer < 0) {
+			            clearInterval(timerInterval);
+			            document.getElementById("examForm").submit();
+			        }
+			    }, 1000);
+			}
+			
+			var timerDisplay = document.getElementById("timer");
+			updateTimer(timerDisplay);
+
+	    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

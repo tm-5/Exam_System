@@ -1,0 +1,523 @@
+[
+   
+    {
+        "question": "Thủ đô của Việt Nam là gì?",
+        "options": [
+            "Hà Nội",
+            "Hồ Chí Minh",
+            "Đà Nẵng",
+            "Cần Thơ"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ai là tác giả của bài thơ Đoàn thuyền đánh cá?",
+        "options": [
+            "Hồ Xuân Hương",
+            "Nguyễn Du",
+            "Huy Cận",
+            "Hàn Mặc Tử"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ai là tác giả của cuốn tiểu thuyết Tôi thấy hoa vàng trên cỏ xanh?",
+        "options": [
+            "Nguyễn Nhật Ánh",
+            "Nguyễn Du",
+            "Nguyễn Tuân",
+            "Nguyễn Quang Sáng"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Trong tác phẩm Truyện Kiều, Kiều bị buộc phải làm gì để cứu cha?",
+        "options": [
+            "Lấy chồng",
+            "Bán thân",
+            "Đánh bại kẻ thù",
+            "Làm nô lệ"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Cuốn sách Số đỏ của tác giả Vũ Trọng Phụng nói về chủ đề gì?",
+        "options": [
+            "Tình yêu",
+            "Cách mạng",
+            "Xã hội",
+            "Thiên nhiên"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Ai là người sáng lập Facebook?",
+        "options": [
+            "Bill Gates",
+            "Mark Zuckerberg",
+            "Jeff Bezos",
+            "Elon Musk"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Quốc gia nào là quê hương của pizza?",
+        "options": [
+            "Ý",
+            "Pháp",
+            "Tây Ban Nha",
+            "Hoa Kỳ"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Thành phố nào được gọi là Thành phố không bao giờ ngủ?",
+        "options": [
+            "New York",
+            "Tokyo",
+            "Paris",
+            "Bangkok"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Bộ phim nào là bộ phim có doanh thu cao nhất mọi thời đại?",
+        "options": [
+            "Avengers: Endgame",
+            "Titanic",
+            "Star Wars: The Force Awakens",
+            "Avatar"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Ngôn ngữ lập trình nào được sử dụng phổ biến nhất?",
+        "options": [
+            "Python",
+            "Java",
+            "C++",
+            "JavaScript"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ai là người đầu tiên bước chân lên Mặt Trăng?",
+        "options": [
+            "Buzz Aldrin",
+            "Neil Armstrong",
+            "Yuri Gagarin",
+            "John F. Kennedy"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Loại nước giải khát Coca-Cola ra đời năm nào?",
+        "options": [
+            "1886",
+            "1901",
+            "1923",
+            "1945"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Dòng sông nào dài nhất thế giới?",
+        "options": [
+            "Sông Nile",
+            "Sông Amazon",
+            "Sông Mississippi",
+            "Sông Mekong"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ngày nào được chọn là Ngày Quốc tế Phụ nữ?",
+        "options": [
+            "8/3",
+            "20/10",
+            "1/5",
+            "12/6"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Loại hình nghệ thuật nào được Leonardo da Vinci nổi tiếng?",
+        "options": [
+            "Âm nhạc",
+            "Văn học",
+            "Hội họa",
+            "Múa"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Thành phố nào được gọi là Thành phố tình yêu?",
+        "options": [
+            "Paris",
+            "Rome",
+            "Venice",
+            "Barcelona"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ai là người đứng đầu của Cách mạng Tháng Tám năm 1945 tại Việt Nam?",
+        "options": [
+            "Hồ Chí Minh",
+            "Võ Nguyên Giáp",
+            "Phạm Văn Đồng",
+            "Trường Chinh"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Cuộc khởi nghĩa nào được coi là bước đầu tiên của Cách mạng Việt Nam?",
+        "options": [
+            "Khởi nghĩa Yên Bái",
+            "Khởi nghĩa Nam Kỳ",
+            "Khởi nghĩa Bình Xuyên",
+            "Khởi nghĩa Hà Tây"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Năm 1975, Việt Nam thống nhất sau cuộc chiến tranh kéo dài bao lâu?",
+        "options": [
+            "10 năm",
+            "20 năm",
+            "30 năm",
+            "40 năm"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Ai là tác giả cuốn tiểu thuyết Chiếc la bàn vàng?",
+        "options": [
+            "J.R.R. Tolkien",
+            "George R.R. Martin",
+            "C.S. Lewis",
+            "J.K. Rowling"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Quốc gia nào đã giành chức vô địch World Cup bóng đá nhiều nhất?",
+        "options": [
+            "Brasil",
+            "Đức",
+            "Ý",
+            "Argentina"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ngôn ngữ lập trình nào được sử dụng để phát triển ứng dụng di động cho hệ điều hành iOS?",
+        "options": [
+            "Swift",
+            "Java",
+            "C#",
+            "Python"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Danh hiệu Người đàn ông hấp dẫn nhất thế giới đã được trao cho ai?",
+        "options": [
+            "Brad Pitt",
+            "Chris Hemsworth",
+            "David Beckham",
+            "George Clooney"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Quốc gia nào có diện tích nhỏ nhất thế giới?",
+        "options": [
+            "Vatican",
+            "Monaco",
+            "Nauru",
+            "San Marino"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Nhân vật nào là người phản diện chính trong tiểu thuyết Harry Potter?",
+        "options": [
+            "Draco Malfoy",
+            "Severus Snape",
+            "Lord Voldemort",
+            "Bellatrix Lestrange"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Quốc gia nào nằm gần nhất với Đại Tây Dương?",
+        "options": [
+            "Bồ Đào Nha",
+            "Maroc",
+            "Cabo Verde",
+            "Tây Ban Nha"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Thành phố nào được gọi là Thành phố của ánh đèn",
+        "options": [
+            "Las Vegas",
+            "Berlin",
+            "Sydney",
+            "Tokyo"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Loại hình nghệ thuật nào được Pablo Picasso nổi tiếng?",
+        "options": [
+            "Sculpture",
+            "Múa",
+            "Văn học",
+            "Hội họa"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Quốc gia nào là quê hương của nhạc sĩ Ludwig van Beethoven?",
+        "options": [
+            "Đức",
+            "Áo",
+            "Nga",
+            "Ba Lan"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Nguyên tử nào có số proton bằng 6?",
+        "options": [
+            "Hydro",
+            "Oxy",
+            "Carbon",
+            "Nitơ"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Công thức hóa học của nước là gì?",
+        "options": [
+            "H2O",
+            "CO2",
+            "CH4",
+            "NH3"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Loại phản ứng nào xảy ra khi một kim loại tác dụng với axit?",
+        "options": [
+            "Phản ứng oxi-hoá khử",
+            "Phản ứng trao đổi",
+            "Phản ứng trùng hợp",
+            "Phản ứng thế"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Ca sĩ nào nổi tiếng với bản hit Shape of You?",
+        "options": [
+            "Ed Sheeran",
+            "Justin Bieber",
+            "Adele",
+            "Bruno Mars"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ban nhạc nào có thành viên là John Lennon, Paul McCartney, George Harrison và Ringo Starr?",
+        "options": [
+            "The Rolling Stones",
+            "Queen",
+            "The Beatles",
+            "Led Zeppelin"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Bài hát Bohemian Rhapsody thuộc về ban nhạc nào?",
+        "options": [
+            "The Rolling Stones",
+            "Queen",
+            "The Beatles",
+            "Pink Floyd"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Ai là người sáng tác bản nhạc Imagine?",
+        "options": [
+            "John Lennon",
+            "Paul McCartney",
+            "Bob Dylan",
+            "Elton John"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Thể loại nhạc nào có nguồn gốc từ Jamaica và thường sử dụng bass mạnh và điệu nhạc độc đáo?",
+        "options": [
+            "Jazz",
+            "Rock",
+            "Reggae",
+            "Country"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Bài hát Billie Jean là của ca sĩ nào?",
+        "options": [
+            "Michael Jackson",
+            "Prince",
+            "Stevie Wonder",
+            "Elvis Presley"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ban nhạc nào nổi tiếng với album Dark Side of the Moon?",
+        "options": [
+            "The Rolling Stones",
+            "Queen",
+            "The Beatles",
+            "Pink Floyd"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Ca khúc Hotel California thuộc về ban nhạc nào?",
+        "options": [
+            "The Eagles",
+            "Fleetwood Mac",
+            "The Doors",
+            "Aerosmith"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ai là người sáng tác bản nhạc Yesterday?",
+        "options": [
+            "John Lennon",
+            "Paul McCartney",
+            "Bob Dylan",
+            "Elton John"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Thể loại nhạc nào có nguồn gốc từ New Orleans và thường sử dụng các nhạc cụ như trumpet, saxophone và drum?",
+        "options": [
+            "Blues",
+            "Jazz",
+            "Funk",
+            "Soul"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Quốc gia nào là quê hương của nhà toán học nổi tiếng Pythagoras?",
+        "options": [
+            "Hy Lạp",
+            "Ai Cập",
+            "Italy",
+            "Trung Quốc"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Loại hoa nào là biểu tượng của tình yêu và sự lãng mạn?",
+        "options": [
+            "Hoa hồng",
+            "Hoa cúc",
+            "Hoa tulip",
+            "Hoa lan"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Thành phố nào được coi là thủ đô của thế giới giải trí?",
+        "options": [
+            "Los Angeles",
+            "New York",
+            "London",
+            "Tokyo"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ngày nào được chọn là Ngày Mẹ?",
+        "options": [
+            "8/3",
+            "20/10",
+            "1/5",
+            "12/5"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Loại động vật nào được coi là con vật thông minh nhất?",
+        "options": [
+            "Chim cánh cụt",
+            "Hổ",
+            "Vượn",
+            "Chim cu"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Quốc gia nào có đội bóng đá vô địch World Cup nhiều nhất?",
+        "options": [
+            "Brasil",
+            "Đức",
+            "Argentina",
+            "Ý"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ngôn ngữ lập trình nào được sử dụng để phát triển trang web động?",
+        "options": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Danh hiệu Nữ hoàng nhạc Pop thuộc về ai?",
+        "options": [
+            "Madonna",
+            "Beyoncé",
+            "Taylor Swift",
+            "Rihanna"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Quốc gia nào là quê hương của nhà văn William Shakespeare?",
+        "options": [
+            "Anh",
+            "Mỹ",
+            "Pháp",
+            "Ý"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Ngày nào được chọn là Ngày Quốc tế Lao động?",
+        "options": [
+            "1/5",
+            "8/3",
+            "20/10",
+            "12/6"
+        ],
+        "answer": 0
+    }
+]

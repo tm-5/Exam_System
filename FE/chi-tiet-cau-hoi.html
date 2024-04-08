@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/chinh-sua-sinh-vien.css">
+    <link rel="stylesheet" href="./css/slideBar.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="./img/Logo_PTIT.jpg">
+        <ul>
+            <li onclick="window.location.href='quan-ly-nguoi-dung.html'">Quản lý người dùng</li>
+            <li onclick="window.location.href='trang-bai-thi.html'">Quản lý kỳ thi</li>
+            <li onclick="window.location.href='trang-thong-ke.html'">Thống kê</li>
+        </ul>
+        <div class="user-login-container">
+            <div id="user-infor"> </div>
+            <button onclick="logOut()"> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg> Log out </button>
+        </div>
+    </div>
+    <div class="content" style="width: 85%; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between;">
+            <h1 style="text-align: center; line-height: 57.6px;">Bảng tổng hợp chi tiết của sinh viên</h1>
+        </div>
+        <table class="table-content" id="products-datatable">
+            <thead>
+                <tr>
+                    <th style="width: 5%;" onclick="sort(0)">Số thứ tự
+                        <i class="fa-solid fa-sort"></i>
+                    </th>
+                    <th style="width: 10%;" onclick="sort(1)">Câu hỏi <i class="fa-solid fa-sort"></i></th>
+                    <th style="width: 10%;" onclick="sort(2)">Đáp án <i class="fa-solid fa-sort"></i>
+                    </th>
+                    <th style="width: 7%;" onclick="sort(3)">Đáp án sinh viên chọn <i class="fa-solid fa-sort"></i>
+                    </th>
+                    <th style="width: 10%;" onclick="sort(4)">Điểm/Câu<i class="fa-solid fa-sort"></i>
+                    </th>
+                    <th style="width: 10%;">Giải thích</th>
+                </tr>
+            </thead>
+            <tbody id="result-table">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="./js/reuse.js"></script>
+    <script src="./js/service.js"></script>
+    <script src="./js/manageAnswer.js"></script>
+    <script src="./js/loadUser.js"></script>
+
+</body>
+</html>
